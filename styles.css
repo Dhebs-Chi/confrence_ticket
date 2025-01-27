@@ -324,60 +324,69 @@ form .generate-ticket:hover {
     transform: rotate(90deg);
  }
 
- @media (max-width: 540px) {
-    .svg-image:nth-child(2) {
-        top: 50px;
-    }
-
-    .svg-image:nth-child(4) {
-        top: -80px;
-        left: -30px;
+ /* Responsive for tablets and smaller screens */
+@media (max-width: +800px) {
+    .form-content {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        padding: 0.75rem;
+        margin: 1rem auto;
     }
 
     .headings h1 {
         font-size: 2rem;
+        margin-bottom: 1rem;
     }
 
-    .img-container {
-        overflow-y: auto;
+    .headings p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
+    .form-item {
+        margin-bottom: 1rem;
+    }
+
+    .form-item input {
+        padding: 0.75rem 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Responsive for phones and smaller screens */
+@media (max-width: 100px-480px) {
     .form-content {
-        padding: 1rem 0;
+        width: 100%;
+        padding: 0.5rem center;
+        margin-top: 100%;
+        display: flex;
+        font-size: 16px;
+        flex-basis: 100%;
+    }
+    .headings h1 {
+        font-size: 1.5rem;
+        flex-basis: 100%;
     }
 
-    .display-data {
-        padding: 0;
+    .headings p {
+        font-size: 0.9rem;
     }
 
-    .display-data .headings p {
-        padding: 0;
+    .form-item input {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.25rem;
     }
 
     .display-data .ticket-container .logo {
-        margin-bottom: 0;
-        font-size: 1.5rem;
-    } 
-
-    .display-data .ticket-container .data {
-        margin-bottom: 2rem;
-    }
-
-    .display-data .ticket-container .ticket-user img {
-        width: 45px;
-    }
-
-    .display-data .ticket-container .ticket-user #display-name {
         font-size: 1.25rem;
     }
 
-    .display-data .ticket-container .ticket-number {
-        right: -8px;
+    .display-data .ticket-container .ticket-user img {
+        width: 35px;
     }
- }
 
- @media (max-width: 400px) {
-    .form-content {
-        height: 620px;
+    .display-data .ticket-container .ticket-user #display-name {
+        font-size: 1rem;
     }
- }
+}
